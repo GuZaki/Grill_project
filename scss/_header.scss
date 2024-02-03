@@ -7,7 +7,7 @@
     width: 100%;
     position: fixed;
     z-index: 2;
-    transition-duration: .5s;
+    // transition-duration: .5s;
     font-family: $font-Montserrat;
 
     &__inner {
@@ -146,10 +146,6 @@
 
         @media(max-width: 925px){
             font-size: 12px;
-        }
-
-        &:hover{
-            @include button-hover;
         }
     }
 }

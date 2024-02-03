@@ -1,0 +1,54 @@
+/*promo*/
+.promo {
+    
+    &__inner {
+        background: url('../img/bg_promo.png') no-repeat cover;
+    }
+
+    &__content {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__bottom {
+        width: 662px;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        display: flex;
+        width: 33.3%;
+    }
+
+    &__right {
+    }
+
+    &__link {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__btns {
+
+        & > button{
+            & > img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
+.link {
+
+    &__scroll-down {
+
+    }
+}
+
