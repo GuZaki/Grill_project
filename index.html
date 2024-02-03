@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Grill Project</title>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+    
+                <div class="header__menu-mobile">
+                    <div class="header__menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>Все разделы</p>
+                </div>
+                
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="#">Состав работ</a></li>
+                        <li><a href="#">Рассчитать</a></li>
+                        <li><a href="#">Наши работы</a></li>
+                        <li><a href="#">Видеообзор</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__contacts">
+                    <a class="header__link" href="tel:+7(333)3333333">+7 333 333 33 33</a>
+                    <button class="header__button button-red">Заказать звонок</button>
+
+                    <div class="mobile-buttons">
+                        <button class="mobile-btn button-red watsapp">
+                            <img src="/img/header/watsup.svg" alt="" srcset="">
+                        </button>
+                        <button class="mobile-btn button-red tg">
+                            <img src="/img/header/telegram.svg" alt="" srcset="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="promo">
+        <div class="container">
+            <div class="promo__inner">
+                <div class="promo__content">
+                    <h1 class="promo__title">Премиальные гриль-кухни</h1>
+                    <p class="promo__text">Проектирование. Изготовление. Установка.</p>
+                </div>
+
+                <div class="promo__bottom">
+                    <button class="promo__btn button-red"><img src="/img/header/phone.svg" alt="">Заказать звонок</button>
+                    <button class="promo__btn button-red"><img src="/img/header/telegram.svg" alt="">Telegram</button>
+                    <button class="promo__btn button-red"><img src="/img/header/watsup.svg" alt="">Whatsapp</button>
+                </div>
+
+                <div class="promo__right">
+                    <div class="promo__link">
+                        <a href="" class="link">
+                            <img class="link__scroll-down" src="/img/header/scroll-down.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="promo__btns">
+                        <button class="promo__btn button-red mobile-btn"><img src="/img/header/phone.svg" alt=""></button>
+                        <button class="promo__btn button-red mobile-btn"><img src="/img/header/calc.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        let header = document.querySelector(".header")
+        window.onscroll = function(){
+            
+    if(window.scrollY > 100){
+        header.style.background = "rgba(255, 255, 255)"
+    }
+    else{
+        header.style.background = "rgba(255, 255, 255, 0.8)" 
+    }
+        }
+    </script>
+</body>
+</html>

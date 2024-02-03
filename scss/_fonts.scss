@@ -1,0 +1,25 @@
+/*fonts*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
+
+@font-face {
+    font-family: 'Posterama';
+    src: url('../fonts/Posterama-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Posterama';
+    src:url('../fonts/Posterama-SemiBold.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Posterama';
+    src:url('../fonts/Posterama-Text-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+

@@ -1,0 +1,23 @@
+$font-Posterama: 'Posterama', sans-serif;
+$font-Montserrat: 'Montserrat', sans-serif;
+
+.button-red {
+    background-color: var(--btn-color);
+    color: var(--text-color);
+}
+
+.button-white{
+    background-color: var(--text-color);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+}
+
+@mixin button-hover{
+    background-color: var(--hover);
+    transition: background-color .5s ease 0s;
+}
+
+@mixin link-hover{
+    color: var(--hover);
+    transition: background-color .5s ease 0s;
+}
