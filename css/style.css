@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
 .button-red {
   background-color: var(--btn-color);
@@ -16,20 +17,20 @@
 
 /*fonts*/
 @font-face {
-  font-family: "Posterama";
-  src: url("../fonts/Posterama-Regular.ttf") format("ttf");
+  font-family: "Posterama Text";
+  src: local("Posterama Text Regular"), local("PosteramaText-Regular"), url("../fonts/Posterama-Text-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Posterama";
-  src: url("../fonts/Posterama-SemiBold.ttf") format("ttf");
+  font-family: "Posterama Text";
+  src: local("Posterama Text Semibold"), local("PosteramaText-Semibold"), url("../fonts/Posterama-Text-Semibold.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Posterama";
-  src: url("../fonts/Posterama-Text-Bold.ttf") format("ttf");
+  font-family: "Posterama Text";
+  src: local("Posterama Text Bold"), local("PosteramaText-Bold"), url("../fonts/Posterama-Text-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
@@ -39,6 +40,7 @@ html {
   --padding-container: 15px;
   --bg-color-main: #A1A1A1;
   --bg-color: #FFFFFF;
+  --header-color:#fffff0;
   --text-color-main: #373E46;
   --text-color: #FBFBFB;
   --btn-color:#621F2A;
@@ -52,7 +54,7 @@ html {
 }
 
 body {
-  font-family: "Posterama", sans-serif;
+  font-family: "Posterama Text", sans-serif;
   font-size: 18px;
   font-weight: 400;
   min-width: 320px;
@@ -72,7 +74,7 @@ img {
 svg {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 button {
@@ -126,6 +128,20 @@ section {
   max-width: calc(var(--container) + var(--padding-container) * 2);
   padding: 0 var(--padding-container);
   margin: 0 auto;
+}
+
+/*кнопки*/
+.mobile-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-btn img, .mobile-btn svg {
+  width: 18px;
+  height: 18px;
 }
 
 /*header*/
@@ -284,38 +300,81 @@ section {
     gap: 20px;
   }
 }
-.mobile-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.mobile-btn img {
-  width: 18px;
-  height: 18px;
-}
 
 /*promo*/
-.promo__inner {
-  background: url("../img/bg_promo.png") no-repeat cover;
+.promo {
+  background: url(../img/bg_promo.png) no-repeat top/cover;
+  height: 837px;
+  padding-top: 275px; /*281px*/
+  position: relative;
+}
+.promo__content {
+  width: 781px;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 87px;
+  background: rgba(55, 62, 70, 0.3);
+}
+.promo__title {
+  font-family: "Posterama Text", sans-serif;
+  font-weight: 500; /*по макету 600*/
+  font-size: 110px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: var(--header-color);
+  margin-bottom: 40px;
+}
+.promo__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--header-color);
 }
 .promo__bottom {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 662px;
   height: 72px;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  background-color: var(--btn-color);
 }
 .promo__btn {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 33.3%;
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 20px 32px;
 }
-.promo__link {
+.promo__btn:hover {
+  background-color: var(--text-color);
+  color: var(--btn-color);
+}
+.promo__btn:hover > svg path {
+  fill: var(--btn-color);
+}
+.promo__right {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+}
+.promo__scroll-down {
+  position: absolute;
   width: 60px;
   height: 60px;
+  right: 0;
+  bottom: 0;
 }
 .promo__btns > button > img {
   width: 32px;
   height: 32px;
+}
+
+.link {
+  height: 5px;
 }/*# sourceMappingURL=style.css.map */

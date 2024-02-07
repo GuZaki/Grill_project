@@ -2,24 +2,29 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
 
 @font-face {
-    font-family: 'Posterama';
-    src: url('../fonts/Posterama-Regular.ttf') format('ttf');
+    font-family: 'Posterama Text';
+    src: local("Posterama Text Regular"),
+        local("PosteramaText-Regular"),
+        url('../fonts/Posterama-Text-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Posterama';
-    src:url('../fonts/Posterama-SemiBold.ttf') format('ttf');
+    font-family: 'Posterama Text';
+    src: local("Posterama Text Semibold"),
+        local("PosteramaText-Semibold"),
+        url('../fonts/Posterama-Text-Semibold.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
 }
 
 
 @font-face {
-    font-family: 'Posterama';
-    src:url('../fonts/Posterama-Text-Bold.ttf') format('ttf');
+    font-family: 'Posterama Text';
+    src: local("Posterama Text Bold"),
+        local("PosteramaText-Bold"),
+        url('../fonts/Posterama-Text-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
-

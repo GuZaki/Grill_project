@@ -1,37 +1,84 @@
 /*promo*/
 .promo {
-    
-    &__inner {
-        background: url('../img/bg_promo.png') no-repeat cover;
+    background: url(../img/bg_promo.png) no-repeat top / cover;
+    height: 837px;
+    padding-top: 275px; /*281px*/
+    position: relative;
+
+    &__container{
     }
 
     &__content {
+        width: 781px;
+        padding: 40px;
+        border-radius: 20px;
+        margin-bottom: 87px;
+        background: rgba(55, 62, 70, 0.3);
     }
 
     &__title {
+        font-family: $font-Posterama;
+        font-weight: 500;/*по макету 600*/
+        font-size: 110px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        color: var(--header-color);
+        margin-bottom: 40px;
     }
 
     &__text {
+        font-family: $font-Montserrat;
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--header-color);
     }
 
     &__bottom {
+        position: absolute;
+        bottom: -36px;
+        left:50%;
+        transform: translateX(-50%);
         width: 662px;
         height: 72px;
+        border-radius: 20px;
         display: flex;
         justify-content: space-between;
+        background-color: var(--btn-color);
     }
 
     &__btn {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 33.3%;
+        color: var(--text-color);
+        border-radius: 20px;
+        padding: 20px 32px;
+
+        &:hover{
+            background-color: var(--text-color);
+            color: var(--btn-color);
+
+            & > svg{
+                & path{   
+                    fill: var(--btn-color)
+                }
+            }
+        }    
     }
 
     &__right {
+        position: absolute;
+        right: 0;
+        bottom: 40px;
     }
 
-    &__link {
+    &__scroll-down {
+        position: absolute;
         width: 60px;
         height: 60px;
+        right: 0;
+        bottom: 0;
     }
 
     &__btns {
@@ -46,9 +93,9 @@
 }
 
 .link {
+    height: 5px;
 
     &__scroll-down {
 
     }
 }
-
