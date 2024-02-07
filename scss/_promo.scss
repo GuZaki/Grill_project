@@ -1,11 +1,34 @@
 /*promo*/
 .promo {
-    background: url(../img/bg_promo.png) no-repeat top / cover;
-    height: 837px;
     position: relative;
+    height: 837px;
+    background: url(../img/promo/bg_main.jpeg) no-repeat top / cover;
+    
+    @media(max-width: 1440px){
+        background-image: url(../img/promo/bg_tablet.jpeg);
+    }
+
+    @media(max-width: 768px){
+        background-image: url(../img/promo/bg_mobile.jpeg);
+    }
+
+    // &__bg{
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     height: 100%;
+    //     width: 100%;
+    //     // z-index: 1;
+
+    //     & img{
+    //         object-fit: cover;
+    //         // object-position: 50px top;
+    //     }
+    // }
 
     &__container{
         padding-top: 205px; /*281px*/
+        // z-index: 2;
     }
 
     &__content {
