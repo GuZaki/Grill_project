@@ -2,17 +2,16 @@
 .promo {
     background: url(../img/bg_promo.png) no-repeat top / cover;
     height: 837px;
-    padding-top: 275px; /*281px*/
     position: relative;
 
     &__container{
+        padding-top: 205px; /*281px*/
     }
 
     &__content {
         width: 781px;
         padding: 40px;
         border-radius: 20px;
-        margin-bottom: 87px;
         background: rgba(55, 62, 70, 0.3);
     }
 
@@ -50,17 +49,25 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 33.3%;
+        gap: 15px;
         color: var(--text-color);
         border-radius: 20px;
         padding: 20px 32px;
 
-        &:hover{
+        font-family: $font-Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+
+        & svg{
+            flex: 1;
+        }
+
+        &:hover {
             background-color: var(--text-color);
             color: var(--btn-color);
 
-            & > svg{
-                & path{   
+            & > svg {
+                & path {   
                     fill: var(--btn-color)
                 }
             }
@@ -69,33 +76,37 @@
 
     &__right {
         position: absolute;
-        right: 0;
-        bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        right: 20px;
+        bottom: -50px;
     }
 
     &__scroll-down {
-        position: absolute;
         width: 60px;
         height: 60px;
-        right: 0;
-        bottom: 0;
-    }
+        position: absolute;
+        right: 240px;
+        bottom: 40px;
 
-    &__btns {
+        &:hover {
+            & a {
+                & > svg {
+                    & path {   
+                        fill: var(--hover);
+                    }
 
-        & > button{
-            & > img {
-                width: 32px;
-                height: 32px;
+                    & circle {   
+                        fill: var(--text-color);
+                        stroke: var(--hover);
+                    }
+                }
             }
-        }
+        } 
     }
+
+    
 }
 
-.link {
-    height: 5px;
 
-    &__scroll-down {
-
-    }
-}

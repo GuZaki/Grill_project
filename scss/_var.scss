@@ -11,17 +11,4 @@ $font-Montserrat: 'Montserrat', sans-serif;
     transition: background-color .5s ease 0s;
 }
 
-.button-red {
-    background-color: var(--btn-color);
-    color: var(--text-color);
-    
-    &:hover{
-        @include button-hover;
-    }
-}
 
-.button-white{
-    background-color: var(--text-color);
-    color: var(--btn-color);
-    border: 1px solid var(--btn-color);
-}

@@ -1,21 +1,6 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
-.button-red {
-  background-color: var(--btn-color);
-  color: var(--text-color);
-}
-.button-red:hover {
-  background-color: var(--hover);
-  transition: background-color 0.5s ease 0s;
-}
-
-.button-white {
-  background-color: var(--text-color);
-  color: var(--btn-color);
-  border: 1px solid var(--btn-color);
-}
-
 /*fonts*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
 @font-face {
   font-family: "Posterama Text";
   src: local("Posterama Text Regular"), local("PosteramaText-Regular"), url("../fonts/Posterama-Text-Regular.otf") format("opentype");
@@ -131,7 +116,7 @@ section {
 }
 
 /*кнопки*/
-.mobile-btn {
+.mobile-link {
   width: 36px;
   height: 36px;
   border-radius: 56px;
@@ -139,9 +124,37 @@ section {
   align-items: center;
   justify-content: center;
 }
-.mobile-btn img, .mobile-btn svg {
+.mobile-link img, .mobile-link svg {
   width: 18px;
   height: 18px;
+}
+
+.button-red {
+  background-color: var(--btn-color);
+  color: var(--text-color);
+}
+.button-red:hover {
+  background-color: var(--hover);
+  transition: background-color 0.5s ease 0s;
+}
+
+.button-white {
+  background-color: var(--text-color);
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+}
+
+.btn-big {
+  width: 60px;
+  height: 60px;
+  border-radius: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-big img, .btn-big svg {
+  width: 25px;
+  height: 25px;
 }
 
 /*header*/
@@ -305,14 +318,15 @@ section {
 .promo {
   background: url(../img/bg_promo.png) no-repeat top/cover;
   height: 837px;
-  padding-top: 275px; /*281px*/
   position: relative;
+}
+.promo__container {
+  padding-top: 205px; /*281px*/
 }
 .promo__content {
   width: 781px;
   padding: 40px;
   border-radius: 20px;
-  margin-bottom: 87px;
   background: rgba(55, 62, 70, 0.3);
 }
 .promo__title {
@@ -346,10 +360,16 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 33.3%;
+  gap: 15px;
   color: var(--text-color);
   border-radius: 20px;
   padding: 20px 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.promo__btn svg {
+  flex: 1;
 }
 .promo__btn:hover {
   background-color: var(--text-color);
@@ -360,21 +380,23 @@ section {
 }
 .promo__right {
   position: absolute;
-  right: 0;
-  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  right: 20px;
+  bottom: -50px;
 }
 .promo__scroll-down {
-  position: absolute;
   width: 60px;
   height: 60px;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  right: 240px;
+  bottom: 40px;
 }
-.promo__btns > button > img {
-  width: 32px;
-  height: 32px;
+.promo__scroll-down:hover a > svg path {
+  fill: var(--hover);
 }
-
-.link {
-  height: 5px;
+.promo__scroll-down:hover a > svg circle {
+  fill: var(--text-color);
+  stroke: var(--hover);
 }/*# sourceMappingURL=style.css.map */
