@@ -217,7 +217,7 @@ section {
 .header__menu-mobile {
   display: none;
   height: 24px;
-  width: 131px;
+  max-width: 131px;
   font-size: 14px;
 }
 @media (max-width: 820px) {
@@ -225,6 +225,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .header__menu-mobile > p {
+    display: none;
   }
 }
 .header__menu-icon {
@@ -244,18 +250,18 @@ section {
   background-color: var(--text-color-main);
   transition: all 0.3s ease 0s;
 }
-@media (max-width: 820px) {
-  .header__menu-icon span {
-    top: calc(50% - 1px);
-    height: 1px;
-  }
-}
 .header__menu-icon span:first-child {
   top: 0;
 }
 .header__menu-icon span:last-child {
   top: auto;
   bottom: 0;
+}
+@media (max-width: 820px) {
+  .header__menu-icon span {
+    top: calc(50% - 1px);
+    height: 1px;
+  }
 }
 .header__contacts {
   display: flex;
@@ -302,6 +308,11 @@ section {
     font-size: 12px;
   }
 }
+@media (max-width: 600px) {
+  .header__button {
+    display: none;
+  }
+}
 
 .mobile-buttons {
   display: none;
@@ -318,7 +329,11 @@ section {
 .promo {
   position: relative;
   height: 837px;
-  background: url(../img/promo/bg_main.jpeg) no-repeat top/cover;
+  background-image: url(../img/promo/bg_main.jpeg);
+  background-position: top center; /* Фоновое изображение выровнено по верху в горизонтальной и по центру в вертикальной плоскостях */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
+  background-size: cover; /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
 }
 @media (max-width: 1440px) {
   .promo {
@@ -328,16 +343,50 @@ section {
 @media (max-width: 768px) {
   .promo {
     background-image: url(../img/promo/bg_mobile.jpeg);
+    height: 489px;
+  }
+}
+@media (max-width: 425px) {
+  .promo {
+    background-image: url(../img/promo/bg.png);
+    height: 465px;
   }
 }
 .promo__container {
   padding-top: 205px; /*281px*/
+}
+@media (max-width: 768px) {
+  .promo__container {
+    padding-top: 73px;
+  }
+}
+@media (max-width: 425px) {
+  .promo__container {
+    padding-top: 100px;
+  }
 }
 .promo__content {
   width: 781px;
   padding: 40px;
   border-radius: 20px;
   background: rgba(55, 62, 70, 0.3);
+}
+@media (max-width: 1040px) {
+  .promo__content {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .promo__content {
+    width: 346px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 425px) {
+  .promo__content {
+    width: 280px;
+  }
 }
 .promo__title {
   font-family: "Posterama Text", sans-serif;
@@ -348,11 +397,45 @@ section {
   color: var(--header-color);
   margin-bottom: 40px;
 }
+@media (max-width: 1040px) {
+  .promo__title {
+    font-size: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .promo__title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .promo__title {
+    font-size: 40px;
+  }
+}
 .promo__text {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 24px;
   color: var(--header-color);
+}
+@media (max-width: 1040px) {
+  .promo__text {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .promo__text {
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .promo__text {
+    font-size: 18px;
+  }
 }
 .promo__bottom {
   position: absolute;
@@ -365,6 +448,14 @@ section {
   display: flex;
   justify-content: space-between;
   background-color: var(--btn-color);
+}
+@media (max-width: 768px) {
+  .promo__bottom {
+    border-radius: 12px;
+    width: 192px;
+    height: 48px;
+    bottom: -24px;
+  }
 }
 .promo__btn {
   display: flex;
@@ -388,6 +479,18 @@ section {
 .promo__btn:hover > svg path {
   fill: var(--btn-color);
 }
+@media (max-width: 768px) {
+  .promo__btn {
+    border-radius: 12px;
+    padding: 12px 20px;
+  }
+  .promo__btn p {
+    display: none;
+  }
+  .promo__btn svg {
+    width: 24px;
+  }
+}
 .promo__right {
   position: absolute;
   display: flex;
@@ -396,9 +499,13 @@ section {
   right: 20px;
   bottom: -50px;
 }
+@media (max-width: 1340px) {
+  .promo__right {
+    display: none;
+  }
+}
 .promo__scroll-down {
   width: 60px;
-  height: 60px;
   position: absolute;
   right: 240px;
   bottom: 40px;
@@ -409,4 +516,19 @@ section {
 .promo__scroll-down:hover a > svg circle {
   fill: var(--text-color);
   stroke: var(--hover);
+}
+@media (max-width: 1340px) {
+  .promo__scroll-down {
+    right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .promo__scroll-down {
+    width: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .promo__scroll-down {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
