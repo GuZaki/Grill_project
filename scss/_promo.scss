@@ -129,7 +129,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 15px;
-        color: var(--text-color);
+        color: var(--bg-color);
         border-radius: 20px;
         padding: 20px 32px;
 
@@ -142,7 +142,7 @@
         }
 
         &:hover {
-            background-color: var(--text-color);
+            background-color: var(--bg-color);
             color: var(--btn-color);
 
             & > svg {
@@ -176,6 +176,9 @@
 
         @media(max-width: 1340px){
             display: none;
+            // right: 40px;
+            // bottom: -100%;
+            // width: 40px;
         }
     }
 
@@ -194,7 +197,7 @@
                     }
 
                     & circle {   
-                        fill: var(--text-color);
+                        fill: var(--bg-color);
                         stroke: var(--hover);
                     }
                 }
@@ -213,7 +216,7 @@
             display: none;
         }  
     }
-
 }
+
 
 
