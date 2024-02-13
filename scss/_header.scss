@@ -2,13 +2,14 @@
 /*header*/
 
 .header {
-    background: rgba(255, 255, 255, 0.8);
+    // background: rgba(255, 255, 255, 0.8);
+    // transition-duration: all .8s;
+    background-color: var(--bg-color);
     font-size: 16px;
     font-weight: 500;
     width: 100vw;
     position: fixed;
     z-index: 2;
-    // transition-duration: .5s;
     font-family: $font-Montserrat;
 
     &__inner {
