@@ -48,7 +48,7 @@ html {
 }
 @media (max-width: 1440px) {
   html {
-    --container: 1000px;
+    --container: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -59,7 +59,7 @@ html {
 }
 @media (max-width: 425px) {
   html {
-    --container: 280px;
+    --container: 100%;
     --padding-container: 20px;
   }
 }
@@ -415,7 +415,12 @@ section {
   background-position: top center; /* Фоновое изображение выровнено по верху в горизонтальной и по центру в вертикальной плоскостях */
   background-repeat: no-repeat;
   background-attachment: fixed; /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
-  background-size: cover; /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
+  background-size: contain; /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
+}
+@media (max-width: 1920px) {
+  .promo {
+    background-size: auto;
+  }
 }
 @media (max-width: 1440px) {
   .promo {
@@ -425,13 +430,13 @@ section {
 @media (max-width: 768px) {
   .promo {
     background-image: url(../img/promo/bg_mobile.jpeg);
-    height: 489px;
+    height: 465px;
   }
 }
 @media (max-width: 425px) {
   .promo {
     background-image: url(../img/promo/bg.png);
-    height: 465px;
+    background-size: contain;
   }
 }
 .promo__container {
@@ -764,7 +769,7 @@ section {
   .feature__cards {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
 }
 .feature__cards > :nth-child(1) > .card__img::before {

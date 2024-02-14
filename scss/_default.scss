@@ -14,7 +14,7 @@ html {
     --hover: #822736;   
     
     @media(max-width: 1440px){
-        --container: 1000px;    
+        --container: 100%;    
     }
 
     @media(max-width: 768px){
@@ -23,7 +23,7 @@ html {
     }
 
     @media(max-width: 425px){
-        --container: 280px;
+        --container: 100%;
         --padding-container: 20px;    
     }
 }

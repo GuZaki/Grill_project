@@ -6,7 +6,11 @@
     background-position: top center; /* Фоновое изображение выровнено по верху в горизонтальной и по центру в вертикальной плоскостях */  
     background-repeat: no-repeat; 
     background-attachment: fixed; /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */     
-    background-size: cover;  /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/  
+    background-size: contain;  /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/  
+    
+    @media(max-width: 1920px){
+        background-size: auto;
+    }
     
     @media(max-width: 1440px){
         background-image: url(../img/promo/bg_tablet.jpeg);
@@ -14,12 +18,12 @@
 
     @media(max-width: 768px){
         background-image: url(../img/promo/bg_mobile.jpeg);
-        height: 489px;
+        height: 465px;
     }
 
     @media(max-width: 425px){
         background-image: url(../img/promo/bg.png);
-        height: 465px;
+        background-size: contain;
     }
 
     &__container{
