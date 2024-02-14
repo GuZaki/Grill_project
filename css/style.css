@@ -48,7 +48,7 @@ html {
 }
 @media (max-width: 1440px) {
   html {
-    --container: 100%;
+    --container: 1000px;
   }
 }
 @media (max-width: 768px) {
@@ -631,7 +631,6 @@ section {
 }
 .advantages__title {
   margin-bottom: 140px;
-  position: relative;
 }
 @media (max-width: 920px) {
   .advantages__title {
@@ -643,7 +642,14 @@ section {
     margin-bottom: 40px;
   }
 }
-.advantages__title::after {
+.advantages__description {
+  position: relative;
+  border-radius: 20px;
+  padding: 32px 60px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+}
+.advantages__description::before {
   position: absolute;
   content: "Приемущества";
   display: block;
@@ -654,30 +660,25 @@ section {
   text-align: center;
   opacity: 0.1;
   z-index: -5;
-  bottom: -155px;
+  top: -70%;
   left: 50%;
   transform: translateX(-50%);
 }
 @media (max-width: 1500px) {
-  .advantages__title::after {
+  .advantages__description::before {
     letter-spacing: 0.08em;
   }
 }
 @media (max-width: 1440px) {
-  .advantages__title::after {
+  .advantages__description::before {
+    top: -45%;
     font-size: 110px;
   }
 }
 @media (max-width: 920px) {
-  .advantages__title::after {
+  .advantages__description::before {
     display: none;
   }
-}
-.advantages__description {
-  border-radius: 20px;
-  padding: 32px 60px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-  background-color: var(--bg-color);
 }
 @media (max-width: 1440px) {
   .advantages__description {

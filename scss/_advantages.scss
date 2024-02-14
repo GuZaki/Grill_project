@@ -9,7 +9,7 @@
 
     &__title{
         margin-bottom: 140px;
-        position: relative;
+        // position: relative;
 
         @media(max-width: 920px){
             margin-bottom: 60px;
@@ -19,7 +19,40 @@
             margin-bottom: 40px;
         }
 
-        &::after{
+        // &::after{
+        //     position: absolute;
+        //     content: 'Приемущества';
+        //     display: block;
+        //     font-weight: 700;
+        //     font-size: 170px;
+        //     line-height: 100%;
+        //     letter-spacing: 0.1em;
+        //     text-align: center;
+        //     opacity: 0.1;
+        //     z-index: -5;
+        //     bottom: -155px;
+        //     left:50%;
+        //     transform: translateX(-50%);
+
+        //     @media(max-width: 1500px){
+        //         letter-spacing: 0.08em;
+        //     }
+
+        //     @media(max-width: 1440px){
+        //         font-size: 110px;
+        //     }
+
+        //     @media(max-width: 920px){
+        //         display: none;
+        //     }
+        // }
+    }
+
+    &__description{
+            position: relative;
+
+
+        &::before{
             position: absolute;
             content: 'Приемущества';
             display: block;
@@ -30,7 +63,7 @@
             text-align: center;
             opacity: 0.1;
             z-index: -5;
-            bottom: -155px;
+            top: -70%;
             left:50%;
             transform: translateX(-50%);
 
@@ -39,6 +72,7 @@
             }
 
             @media(max-width: 1440px){
+                top: -45%;
                 font-size: 110px;
             }
 
@@ -46,9 +80,7 @@
                 display: none;
             }
         }
-    }
 
-    &__description{
         border-radius: 20px;
         padding: 32px 60px;
         box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
