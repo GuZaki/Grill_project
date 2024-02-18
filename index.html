@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     
     <title>Grill Project</title>
@@ -206,23 +208,44 @@
         </div>
     </section>
 
+    <section class="worksteps">
+        <div class="container">
+            <h2 class="worksteps__title title">Состав работ</h2>
 
+            <div class="worksteps__swiper swiper">
+                    
+                <div class="worksteps__swiper-wrapper swiper-wrapper">
+                    <div class="worksteps__swiper-slide swiper-slide">
+                        <div class="slide">
+                            <!-- <img class="slide__img" src="img/worksteps/slide_1.png" alt=""> -->
+                            <div class="slide__content">
 
+                                <h3 class="slide__title">Выбор конфигурации</h3>
+                                <p class="slide__text text">На первом этапе работы мы помогаем определиться с формой кухни, количеством и наполнением каждого модуля. 
+                                    Предусматриваем блоки под установку грилей и встраиваемой бытовой техники.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="worksteps__swiper-slide swiper-slide">Slide 2</div>
+                    <div class="worksteps__swiper-slide swiper-slide">Slide 3</div>
+                    <div class="worksteps__swiper-slide swiper-slide">Slide 4</div>
+                </div>
 
+                <div class="worksteps__swiper-pagination"></div>
+                
+                <div class="swiper-button-next arrow"></div>
+                <div class="swiper-button-prev arrow"></div>
 
-<!-- 
-    <script>
-        let header = document.querySelector(".header")
-        window.onscroll = function(){
-            
-    if(window.scrollY > 100){
-        header.style.background = "rgba(255, 255, 255)"
-    }
-    else{
-        header.style.background = "rgba(255, 255, 255, 0.8)" 
-    }
-        }
-    </script> -->
+                
+
+            </div>
+                
+
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 
