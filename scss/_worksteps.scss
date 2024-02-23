@@ -6,21 +6,20 @@
     }
 
     &__swiper{
-        
+        position: relative;
         // display: flex;
         // flex-direction: row-reverse;
         // justify-content: space-between;
 
         &-wrapper{
+            position: relative;
             font-family: $font-Montserrat;
             right: 0;
             height: 447px;
         }
 
         &-slide {
-            width: 1080px;
-            right: 0;
-            background: url('../img/worksteps/slide_1.png') no-repeat;
+            
         }
 
         &-pagination{
@@ -29,7 +28,10 @@
             justify-content: space-between;
             width: 340px !important;
             height: 344px;
+            position: absolute;
+            top: 0 !important;
 
+            z-index: 99;
             
 
             
@@ -91,10 +93,18 @@
 
 
   .slide{
+    position: absolute;
+    width: 1080px !important;
+    right: 0;
+    background: url('../img/worksteps/slide_1.jpg') no-repeat right/cover;
+    border-radius: 20px;
+    display: flex;
+    justify-content: end;
+
     &__content{
         border-radius: 0 20px 20px 0;
         padding: 40px;
-        width: 1080px !important; 
+        width: 650px !important; 
         height: 447px;
         backdrop-filter: blur(4px);
         background: rgba(55, 62, 70, 0.6);

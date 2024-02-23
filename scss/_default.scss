@@ -204,3 +204,19 @@ section{
         line-height: 130%;
     }
 }
+
+
+/*slider*/
+.swiper-button-prev {
+    left: 50% !important;
+
+    &::after{
+        height: 100%;
+    }
+        
+}
+
+.arrow{
+    color: var(--text-color);
+
+}
