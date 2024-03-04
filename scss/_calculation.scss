@@ -1,0 +1,68 @@
+/*calculation*/
+.calculation {
+
+    &__container {
+        font-family: $font-Montserrat;
+    }
+
+    &__title {
+        margin-bottom: 80px;
+    }
+
+    &__text {
+        margin-bottom: 80px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.4;
+        color: var(--text-color-main);
+    }
+
+    &__content {
+        border-radius: 40px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        background-color: var(--bg-color);
+        display: flex;
+        gap: 60px;
+    }
+
+    &__img {
+        max-width: 400px;
+        height: 556px;
+
+        & > img {
+            object-fit: cover;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+        }
+    }
+
+    &__info {
+        margin-bottom: 80px;
+        padding: 60px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__links {
+        max-width: 636px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__link {
+        border-radius: 51px;
+        padding: 20px 0;
+        font-weight: 500;
+        font-size: 18px;
+        width: 298px;
+    }
+}
+
+.inputs {
+    &__legend {
+        display: flex;
+        flex-direction: column;
+    }
+}

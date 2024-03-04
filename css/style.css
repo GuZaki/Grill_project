@@ -1099,4 +1099,61 @@ section {
 }
 .slide__text {
   color: var(--text-color);
+}
+
+/*calculation*/
+.calculation__container {
+  font-family: "Montserrat", sans-serif;
+}
+.calculation__title {
+  margin-bottom: 80px;
+}
+.calculation__text {
+  margin-bottom: 80px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--text-color-main);
+}
+.calculation__content {
+  border-radius: 40px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-color);
+  display: flex;
+  gap: 60px;
+}
+.calculation__img {
+  max-width: 400px;
+  height: 556px;
+}
+.calculation__img > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.calculation__info {
+  margin-bottom: 80px;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.calculation__links {
+  max-width: 636px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.calculation__link {
+  border-radius: 51px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  width: 298px;
+}
+
+.inputs__legend {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
