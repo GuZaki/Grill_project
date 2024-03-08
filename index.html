@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     
     <title>Grill Project</title>
     
@@ -266,22 +266,28 @@
                 <p class="calculation__text">Предлагаем вам посмотреть на внешний вид вашей будущей гриль-кухни и получить предварительный расчет стоимости изготовления. Ваши персональные данные не потребуются.<br>
                 Выберите соответствующие характеристики гриль-кухни:</p>
                 <div class="calculation__content">
-                    <div class="calculation__img">
+                    <picture class="calculation__img">
+                        <source srcset="img/calculation/img_1440.jpg" media="(min-width: 1440px)">
+                        <source srcset="img/calculation/img_768.jpg" media="(min-width: 768px)">
+                        <source srcset="img/calculation/img_320.jpg" media="(min-width: 600px)">
                         <img src="img/calculation/img.jpg" alt="">
-                    </div>
+                    </picture>
                     <div class="calculation__info">
                         <div class="calculation__inputs">
-                        <fieldset>
-                            <legend class="subtitle">Материал фасада</legend>
-                            <label>
-                                <input type="radio" checked>
-                                нержавеющая сталь
-                            </label>
-                            <label>
-                                <input type="radio">
-                                композит
-                            </label>
-                        </fieldset>
+                            <form action="">
+                                <fieldset>
+                                    <legend class="subtitle">Материал фасада</legend>
+                                    <label>
+                                        <input type="radio" checked>
+                                        нержавеющая сталь
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        композит
+                                    </label>
+                                </fieldset>
+                            </form>
+                        
 
                         <fieldset>
                             <legend class="subtitle">Тип размещения</legend>
